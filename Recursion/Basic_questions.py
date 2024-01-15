@@ -49,3 +49,14 @@ arr= [1,2,4,5,50, 90, 100]
 print(findIndex(arr, 0, 7))
 print(findIndex1(arr, 5, 0))
 print(findIndex2(arr, 5))
+
+# Last index Method-1
+def lastIndex(arr, x, n):
+    if n==-1:
+        return "Not found"
+    if arr[n]==x:
+        return n
+    return lastIndex(arr, x, n-1)
+
+arr= [1,2,4,5,5, 50, 90,5, 100]
+print(lastIndex(arr, 5, len(arr)-1))
